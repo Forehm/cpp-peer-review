@@ -15,7 +15,7 @@ public:
     }
 
     bool operator==(const Domain& rhs) const {
-        return (domain_ == rhs.domain_);
+        return domain_ == rhs.domain_;
     }
 
     bool IsSubDomain(const Domain& rhs) const {
