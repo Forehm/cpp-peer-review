@@ -69,9 +69,6 @@ private:
 
 
 int main() {
-
-
-
     EBook book;
 
     int query_count;
