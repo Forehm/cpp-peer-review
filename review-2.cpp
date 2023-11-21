@@ -22,9 +22,7 @@ public:
         if (rhs.domain_.size() <= domain_.size()) {
             return equal(rhs.domain_.begin(), rhs.domain_.end(), domain_.begin());
         }
-        else {
-            return false;
-        }
+        return false;
     }
 
     string GetValue() const {
