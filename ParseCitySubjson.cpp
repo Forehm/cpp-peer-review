@@ -18,7 +18,6 @@ void ParseCitySubjson(vector<City>& cities, const Json& json, ParseCitySubjsonRe
     }
 }
 
-// ParseCitySubjson âûçûâàåòñÿ òîëüêî èç ôóíêöèè ParseCountryJson ñëåäóþùèì îáðàçîì:
 void ParseCountryJson(vector<Country>& countries, vector<City>& cities, const Json& json) {
     for (const auto& country_json : json.AsList()) {
         const auto& country_obj = country_json.AsObject();
