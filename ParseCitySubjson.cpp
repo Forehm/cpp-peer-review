@@ -6,7 +6,6 @@ struct ParseCitySubjsonRequest {
     const vector<Language>& languages;
 };
 
-// Дана функция ParseCitySubjson, обрабатывающая JSON-объект со списком городов конкретной страны:
 void ParseCitySubjson(vector<City>& cities, const Json& json, ParseCitySubjsonRequest parse_city_subject_request) {
     for (const auto& city_json : json.AsList()) {
         const auto& city_obj = city_json.AsObject();
@@ -19,7 +18,7 @@ void ParseCitySubjson(vector<City>& cities, const Json& json, ParseCitySubjsonRe
     }
 }
 
-// ParseCitySubjson вызывается только из функции ParseCountryJson следующим образом:
+// ParseCitySubjson ГўГ»Г§Г»ГўГ ГҐГІГ±Гї ГІГ®Г«ГјГЄГ® ГЁГ§ ГґГіГ­ГЄГ¶ГЁГЁ ParseCountryJson Г±Г«ГҐГ¤ГіГѕГ№ГЁГ¬ Г®ГЎГ°Г Г§Г®Г¬:
 void ParseCountryJson(vector<Country>& countries, vector<City>& cities, const Json& json) {
     for (const auto& country_json : json.AsList()) {
         const auto& country_obj = country_json.AsObject();
