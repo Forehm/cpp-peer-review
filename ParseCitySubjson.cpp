@@ -6,7 +6,7 @@ struct ParseCitySubjsonRequest {
     const vector<Language>& languages;
 };
 
-void ParseCitySubjson(vector<City>& cities, const Json& json, ParseCitySubjsonRequest parse_city_subject_request) {
+void ParseCitySubjson(vector<City>& cities, const Json& json, const ParseCitySubjsonRequest& parse_city_subject_request) {
     for (const auto& city_json : json.AsList()) {
         const auto& city_obj = city_json.AsObject();
         cities.push_back({ city_obj["name"s].AsString(),
