@@ -13,7 +13,7 @@ struct MinMAx
 
 
 vector<Person> LoadPersons(string_view db_name, int db_connection_timeout, is_use_exceptions db_allow_exceptions = is_use_exceptions::DENY,
-    DBLogLevel db_log_level, MinMAx<int> age, string_view name_filter)
+    const DBLogLevel& db_log_level, const MinMAx<int>& age, string_view name_filter)
 {
     DBConnector connector(db_allow_exceptions, db_log_level);
     DBHandler db;
